@@ -39,11 +39,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <SafeIcon icon={FiPhone} className="text-accent-500" />
-                <span>+44 121 XXX XXXX</span>
+                <span>0121 517 2175</span>
               </div>
               <div className="flex items-center space-x-2">
                 <SafeIcon icon={FiMail} className="text-accent-500" />
-                <span>info@smashaspud.co.uk</span>
+                <span>info@smashaspud.uk</span>
               </div>
             </div>
           </motion.div>

@@ -106,7 +106,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                  <p className="text-gray-600">+44 121 XXX XXXX</p>
+                  <p className="text-gray-600">0121 517 2175</p>
                 </div>
               </motion.div>
 
@@ -120,7 +120,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                  <p className="text-gray-600">info@smashaspud.co.uk</p>
+                  <p className="text-gray-600">info@smashaspud.uk</p>
                 </div>
               </motion.div>
 
