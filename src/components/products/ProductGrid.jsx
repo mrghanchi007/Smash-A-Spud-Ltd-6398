@@ -6,12 +6,12 @@ const ProductGrid = ({ filters }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 12;
 
-  // Sample product data with proper images
+  // Sample product data with local images
   const allProducts = [
     {
       id: 1,
       name: "Capri Sun Cherry",
-      image: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&h=400&fit=crop&crop=center",
+      image: "/img/products/Capri Sun Cherry.jpeg",
       price: 9.99,
       category: "drinks",
       brand: "Capri Sun",
@@ -20,7 +20,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 2,
       name: "Walker's Classic Crisps",
-      image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=400&h=400&fit=crop&crop=center",
+      image: "/img/products/Walker's Classic Crisps.jpg",
       price: 12.99,
       category: "crisps",
       brand: "Walkers",
@@ -29,7 +29,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 3,
       name: "Coca Cola Classic",
-      image: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400&h=400&fit=crop&crop=center",
+      image: "/img/products/Coca Cola Classic.webp",
       price: 10.20,
       category: "drinks",
       brand: "Coca Cola",
@@ -38,7 +38,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 4,
       name: "Cadbury Dairy Milk",
-      image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=400&fit=crop&crop=center",
+      image: "/img/products/Cadbury Dairy Milk.jpg",
       price: 35.00,
       category: "sweets",
       brand: "Cadbury",
@@ -47,7 +47,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 5,
       name: "Heinz Baked Beans",
-      image: "https://jollyposhfoods.com/cdn/shop/files/Beans.png",
+      image: "/img/products/Heinz Baked Beans.webp",
       price: 8.40,
       category: "tins",
       brand: "Heinz",
@@ -56,7 +56,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 6,
       name: "Mr. Kipling Cakes",
-      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop&crop=center",
+      image: "/img/products/Mr. Kipling Cakes.jpg",
       price: 7.80,
       category: "cakes",
       brand: "Mr. Kipling",
@@ -65,7 +65,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 7,
       name: "Red Bull Energy",
-      image: "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?w=400&h=400&fit=crop&crop=center",
+      image: "/img/products/Red Bull Energy.jpg",
       price: 30.00,
       category: "drinks",
       brand: "Red Bull",
@@ -74,47 +74,209 @@ const ProductGrid = ({ filters }) => {
     {
       id: 8,
       name: "Pringles Original",
-      image: "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=400&h=400&fit=crop&crop=center",
-      price: 18.00,
+      image: "/img/products/Pringles Original.jpeg",
+      price: 4.50,
       category: "crisps",
       brand: "Pringles",
       description: "Stackable potato crisps"
     },
     {
       id: 9,
-      name: "Nestle Kit Kat",
-      image: "https://flowerbouquet.pk/cdn/shop/files/Nestle_KitKat-4_Finger.png",
-      price: 22.50,
-      category: "sweets",
-      brand: "Nestle",
-      description: "Crispy wafer chocolate bar"
+      name: "7Up Free",
+      image: "/img/products/7Up Free.webp",
+      price: 6.75,
+      category: "drinks",
+      brand: "7Up",
+      description: "Sugar-free lemon lime soda"
     },
     {
       id: 10,
-      name: "Lucozade Energy",
-      image: "https://images.unsplash.com/photo-1624517452488-04869289c4ca?w=400&h=400&fit=crop&crop=center",
-      price: 15.99,
+      name: "KitKat Chocolate Bar",
+      image: "/img/products/KitKat Chocolate Bar.webp",
+      price: 3.20,
+      category: "sweets",
+      brand: "KitKat",
+      description: "Crispy wafer chocolate bar"
+    },
+    {
+      id: 11,
+      name: "Lucozade Energy Drink",
+      image: "/img/products/Lucozade Energy Drink.jpg",
+      price: 5.99,
       category: "drinks",
       brand: "Lucozade",
       description: "Glucose energy drink"
     },
     {
-      id: 11,
-      name: "Doritos Nacho Cheese",
-      image: "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=400&h=400&fit=crop&crop=center",
-      price: 16.50,
-      category: "crisps",
-      brand: "Doritos",
-      description: "Nacho cheese flavored corn chips"
+      id: 12,
+      name: "Oreo Biscuits",
+      image: "/img/products/Oreo Biscuits.webp",
+      price: 1.50,
+      category: "cakes",
+      brand: "Oreo",
+      description: "Chocolate sandwich cookies"
     },
     {
-      id: 12,
-      name: "Haribo Gummy Bears",
-      image: "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=400&h=400&fit=crop&crop=center",
-      price: 12.75,
+      id: 13,
+      name: "Pepsi Max",
+      image: "/img/products/Pepsi Max.jpeg",
+      price: 2.10,
+      category: "drinks",
+      brand: "Pepsi",
+      description: "Zero sugar cola drink"
+    },
+    {
+      id: 14,
+      name: "Sprite Lemon-Lime",
+      image: "/img/products/Sprite Lemon-Lime.webp",
+      price: 1.00,
+      category: "drinks",
+      brand: "Sprite",
+      description: "Refreshing lemon lime soda"
+    },
+    {
+      id: 15,
+      name: "Monster Energy Drink",
+      image: "/img/products/Monster Energy Drink.webp",
+      price: 3.80,
+      category: "drinks",
+      brand: "Monster",
+      description: "High caffeine energy drink"
+    },
+    {
+      id: 16,
+      name: "Fanta Orange",
+      image: "/img/products/Fanta Orange.jpeg",
+      price: 1.65,
+      category: "drinks",
+      brand: "Fanta",
+      description: "Orange flavored soda"
+    },
+    {
+      id: 17,
+      name: "Galaxy Smooth Milk",
+      image: "/img/products/Galaxy Smooth Milk.webp",
+      price: 4.90,
       category: "sweets",
-      brand: "Haribo",
-      description: "Classic gummy bear sweets"
+      brand: "Galaxy",
+      description: "Smooth milk chocolate bar"
+    },
+    {
+      id: 18,
+      name: "Doritos Tangy Cheese",
+      image: "/img/products/Doritos Tangy Cheese.jpeg",
+      price: 2.75,
+      category: "crisps",
+      brand: "Doritos",
+      description: "Tangy cheese flavored tortilla chips"
+    },
+    {
+      id: 19,
+      name: "Maltesers",
+      image: "/img/products/Maltesers.jpeg",
+      price: 2.20,
+      category: "sweets",
+      brand: "Maltesers",
+      description: "Malted milk chocolate balls"
+    },
+    {
+      id: 20,
+      name: "McVitie's Digestives",
+      image: "/img/products/McVitie's Digestives.jpg",
+      price: 1.80,
+      category: "cakes",
+      brand: "McVitie's",
+      description: "Wheat biscuits"
+    },
+    {
+      id: 21,
+      name: "Cheetos Crunchy",
+      image: "/img/products/Cheetos Crunchy.jpeg",
+      price: 3.10,
+      category: "crisps",
+      brand: "Cheetos",
+      description: "Crunchy cheese puffs"
+    },
+    {
+      id: 22,
+      name: "Walkers Cheese & Onion",
+      image: "/img/products/Walkers Cheese & Onion.jpg",
+      price: 2.99,
+      category: "crisps",
+      brand: "Walkers",
+      description: "Cheese and onion flavored crisps"
+    },
+    {
+      id: 23,
+      name: "Kinder Bueno",
+      image: "/img/products/Kinder Bueno.jpeg",
+      price: 5.50,
+      category: "sweets",
+      brand: "Kinder",
+      description: "Hazelnut cream chocolate bar"
+    },
+    {
+      id: 24,
+      name: "Lindt Lindor Truffles",
+      image: "/img/products/Lindt Lindor Truffles.webp",
+      price: 3.90,
+      category: "sweets",
+      brand: "Lindt",
+      description: "Premium chocolate truffles"
+    },
+    {
+      id: 25,
+      name: "Tropicana Orange Juice",
+      image: "/img/products/Tropicana Orange Juice.jpg",
+      price: 2.30,
+      category: "drinks",
+      brand: "Tropicana",
+      description: "Fresh orange juice"
+    },
+    {
+      id: 26,
+      name: "Ribena Blackcurrant",
+      image: "/img/products/Ribena Blackcurrant.jpeg",
+      price: 1.20,
+      category: "drinks",
+      brand: "Ribena",
+      description: "Blackcurrant fruit drink"
+    },
+    {
+      id: 27,
+      name: "Robinsons Fruit Shoot",
+      image: "/img/products/Robinsons Fruit Shoot.webp",
+      price: 0.85,
+      category: "drinks",
+      brand: "Robinsons",
+      description: "Kids fruit drink"
+    },
+    {
+      id: 28,
+      name: "Nestlé Pure Life Water",
+      image: "/img/products/Nestlé Pure Life Water.jpg",
+      price: 2.00,
+      category: "drinks",
+      brand: "Nestlé",
+      description: "Pure bottled water"
+    },
+    {
+      id: 29,
+      name: "Volvic Mineral Water",
+      image: "/img/products/Volvic Mineral Water.webp",
+      price: 4.00,
+      category: "drinks",
+      brand: "Volvic",
+      description: "Natural mineral water"
+    },
+    {
+      id: 30,
+      name: "Barbican Malt Beverage",
+      image: "/img/products/Barbican Malt Beverage.webp",
+      price: 3.50,
+      category: "drinks",
+      brand: "Barbican",
+      description: "Non-alcoholic malt beverage"
     }
   ];
 
@@ -123,13 +285,23 @@ const ProductGrid = ({ filters }) => {
     return allProducts.filter(product => {
       const matchesCategory = filters.category === 'all' || product.category === filters.category;
       const matchesBrand = filters.brand === 'all' || product.brand.toLowerCase().includes(filters.brand.toLowerCase());
-      const matchesSearch = filters.search === '' || 
+      const matchesSearch = filters.search === '' ||
         product.name.toLowerCase().includes(filters.search.toLowerCase()) ||
         product.brand.toLowerCase().includes(filters.search.toLowerCase());
 
       return matchesCategory && matchesBrand && matchesSearch;
     });
   }, [filters]);
+
+  // Handle page change with scroll to top
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    // Scroll to top of page smoothly
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   // Pagination
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
@@ -164,9 +336,9 @@ const ProductGrid = ({ filters }) => {
         transition={{ duration: 0.6 }}
       >
         {currentProducts.map((product, index) => (
-          <ProductCard 
-            key={product.id} 
-            product={product} 
+          <ProductCard
+            key={product.id}
+            product={product}
             index={index}
           />
         ))}
@@ -184,12 +356,11 @@ const ProductGrid = ({ filters }) => {
             {[...Array(totalPages)].map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentPage(index + 1)}
-                className={`w-10 h-10 rounded-lg font-medium transition-all duration-300 ${
-                  currentPage === index + 1
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-white text-gray-700 hover:bg-primary-50 border border-gray-300'
-                }`}
+                onClick={() => handlePageChange(index + 1)}
+                className={`w-10 h-10 rounded-lg font-medium transition-all duration-300 ${currentPage === index + 1
+                  ? 'bg-primary-600 text-white'
+                  : 'bg-white text-gray-700 hover:bg-primary-50 border border-gray-300'
+                  }`}
               >
                 {index + 1}
               </button>

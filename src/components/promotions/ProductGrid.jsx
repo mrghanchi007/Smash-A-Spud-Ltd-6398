@@ -6,12 +6,12 @@ const ProductGrid = ({ filters }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 12;
 
-  // Sample product data with proper images
+  // Sample product data with local images and promotion details
   const allProducts = [
     {
       id: 1,
       name: "Capri Sun Cherry",
-      image: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&h=400&fit=crop&crop=center",
+      image: "/img/products/Capri Sun Cherry.jpeg",
       rrp: 1.19,
       cost: 0.79,
       pack: "15x330ml",
@@ -24,7 +24,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 2,
       name: "Walker's Classic Crisps",
-      image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=400&h=400&fit=crop&crop=center",
+      image: "/img/products/Walker's Classic Crisps.jpg",
       rrp: 0.89,
       cost: 0.55,
       pack: "24x25g",
@@ -37,7 +37,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 3,
       name: "Coca Cola Classic",
-      image: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400&h=400&fit=crop&crop=center",
+      image: "/img/products/Coca Cola Classic.webp",
       rrp: 1.25,
       cost: 0.85,
       pack: "12x330ml",
@@ -50,7 +50,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 4,
       name: "Cadbury Dairy Milk",
-      image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=400&fit=crop&crop=center",
+      image: "/img/products/Cadbury Dairy Milk.jpg",
       rrp: 2.50,
       cost: 1.75,
       pack: "20x45g",
@@ -63,7 +63,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 5,
       name: "Heinz Baked Beans",
-      image: "https://jollyposhfoods.com/cdn/shop/files/Beans.png",
+      image: "/img/products/Heinz Baked Beans.webp",
       rrp: 1.10,
       cost: 0.70,
       pack: "12x415g",
@@ -76,7 +76,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 6,
       name: "Mr. Kipling Cakes",
-      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop&crop=center",
+      image: "/img/products/Mr. Kipling Cakes.jpg",
       rrp: 2.00,
       cost: 1.30,
       pack: "6x6 pack",
@@ -89,7 +89,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 7,
       name: "Red Bull Energy",
-      image: "https://cxp.asia/2020/wp-content/uploads/2021/05/RB_Classic_FinalWEB_JPEG_80.jpg",
+      image: "/img/products/Red Bull Energy.jpg",
       rrp: 1.85,
       cost: 1.25,
       pack: "24x250ml",
@@ -102,7 +102,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 8,
       name: "Pringles Original",
-      image: "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=300&h=300&fit=crop",
+      image: "/img/products/Pringles Original.jpeg",
       rrp: 2.25,
       cost: 1.50,
       pack: "12x165g",
@@ -111,6 +111,110 @@ const ProductGrid = ({ filters }) => {
       category: "crisps",
       brand: "Pringles",
       tags: ["special"]
+    },
+    {
+      id: 9,
+      name: "Pepsi Max",
+      image: "/img/products/Pepsi Max.jpeg",
+      rrp: 1.20,
+      cost: 0.80,
+      pack: "12x330ml",
+      finalPrice: 9.60,
+      por: 33.3,
+      category: "drinks",
+      brand: "Pepsi",
+      tags: ["hot"]
+    },
+    {
+      id: 10,
+      name: "Galaxy Smooth Milk",
+      image: "/img/products/Galaxy Smooth Milk.webp",
+      rrp: 2.20,
+      cost: 1.45,
+      pack: "24x42g",
+      finalPrice: 34.80,
+      por: 34.1,
+      category: "sweets",
+      brand: "Galaxy",
+      tags: ["new"]
+    },
+    {
+      id: 11,
+      name: "Doritos Tangy Cheese",
+      image: "/img/products/Doritos Tangy Cheese.jpeg",
+      rrp: 1.89,
+      cost: 1.20,
+      pack: "12x150g",
+      finalPrice: 14.40,
+      por: 36.5,
+      category: "crisps",
+      brand: "Doritos",
+      tags: ["special"]
+    },
+    {
+      id: 12,
+      name: "KitKat Chocolate Bar",
+      image: "/img/products/KitKat Chocolate Bar.webp",
+      rrp: 1.95,
+      cost: 1.25,
+      pack: "24x41.5g",
+      finalPrice: 30.00,
+      por: 35.9,
+      category: "sweets",
+      brand: "KitKat",
+      tags: ["hot"]
+    },
+    {
+      id: 13,
+      name: "Monster Energy Drink",
+      image: "/img/products/Monster Energy Drink.webp",
+      rrp: 2.10,
+      cost: 1.40,
+      pack: "12x500ml",
+      finalPrice: 16.80,
+      por: 33.3,
+      category: "drinks",
+      brand: "Monster",
+      tags: ["new", "hot"]
+    },
+    {
+      id: 14,
+      name: "McVitie's Digestives",
+      image: "/img/products/McVitie's Digestives.jpg",
+      rrp: 1.75,
+      cost: 1.10,
+      pack: "12x400g",
+      finalPrice: 13.20,
+      por: 37.1,
+      category: "cakes",
+      brand: "McVitie's",
+      tags: ["special"]
+    },
+    {
+      id: 15,
+      name: "Maltesers",
+      image: "/img/products/Maltesers.jpeg",
+      rrp: 2.30,
+      cost: 1.50,
+      pack: "20x37g",
+      finalPrice: 30.00,
+      por: 34.8,
+      category: "sweets",
+      brand: "Maltesers",
+      tags: ["hot"]
+    },
+    {
+      id: 16,
+      name: "Lucozade Energy Drink",
+      image: "/img/products/Lucozade Energy Drink.jpg",
+      rrp: 1.65,
+      cost: 1.05,
+      pack: "12x380ml",
+      finalPrice: 12.60,
+      por: 36.4,
+      category: "drinks",
+      brand: "Lucozade",
+      tags: ["new", "special"]
     }
   ];
 
@@ -142,6 +246,16 @@ const ProductGrid = ({ filters }) => {
       return matchesCategory && matchesBrand && matchesSearch && matchesPorRange;
     });
   }, [filters]);
+
+  // Handle page change with scroll to top
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    // Scroll to top of page smoothly
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   // Pagination
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
@@ -196,7 +310,7 @@ const ProductGrid = ({ filters }) => {
             {[...Array(totalPages)].map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentPage(index + 1)}
+                onClick={() => handlePageChange(index + 1)}
                 className={`w-10 h-10 rounded-lg font-medium transition-all duration-300 ${
                   currentPage === index + 1
                     ? 'bg-primary-600 text-white'
