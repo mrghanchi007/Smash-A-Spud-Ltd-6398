@@ -6,12 +6,12 @@ const ProductGrid = ({ filters }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 12;
 
-  // Sample product data
+  // Sample product data with proper images
   const allProducts = [
     {
       id: 1,
       name: "Capri Sun Cherry",
-      image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&h=400&fit=crop&crop=center",
       price: 9.99,
       category: "drinks",
       brand: "Capri Sun",
@@ -20,7 +20,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 2,
       name: "Walker's Classic Crisps",
-      image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=400&h=400&fit=crop&crop=center",
       price: 12.99,
       category: "crisps",
       brand: "Walkers",
@@ -29,7 +29,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 3,
       name: "Coca Cola Classic",
-      image: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400&h=400&fit=crop&crop=center",
       price: 10.20,
       category: "drinks",
       brand: "Coca Cola",
@@ -38,7 +38,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 4,
       name: "Cadbury Dairy Milk",
-      image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=400&fit=crop&crop=center",
       price: 35.00,
       category: "sweets",
       brand: "Cadbury",
@@ -47,7 +47,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 5,
       name: "Heinz Baked Beans",
-      image: "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=300&h=300&fit=crop",
+      image: "https://jollyposhfoods.com/cdn/shop/files/Beans.png",
       price: 8.40,
       category: "tins",
       brand: "Heinz",
@@ -56,7 +56,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 6,
       name: "Mr. Kipling Cakes",
-      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop&crop=center",
       price: 7.80,
       category: "cakes",
       brand: "Mr. Kipling",
@@ -65,7 +65,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 7,
       name: "Red Bull Energy",
-      image: "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?w=400&h=400&fit=crop&crop=center",
       price: 30.00,
       category: "drinks",
       brand: "Red Bull",
@@ -74,7 +74,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 8,
       name: "Pringles Original",
-      image: "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=400&h=400&fit=crop&crop=center",
       price: 18.00,
       category: "crisps",
       brand: "Pringles",
@@ -83,7 +83,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 9,
       name: "Nestle Kit Kat",
-      image: "https://images.unsplash.com/photo-1567235349994-b5d0b26c5b6b?w=300&h=300&fit=crop",
+      image: "https://flowerbouquet.pk/cdn/shop/files/Nestle_KitKat-4_Finger.png",
       price: 22.50,
       category: "sweets",
       brand: "Nestle",
@@ -92,7 +92,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 10,
       name: "Lucozade Energy",
-      image: "https://images.unsplash.com/photo-1624517452488-04869289c4ca?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1624517452488-04869289c4ca?w=400&h=400&fit=crop&crop=center",
       price: 15.99,
       category: "drinks",
       brand: "Lucozade",
@@ -101,7 +101,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 11,
       name: "Doritos Nacho Cheese",
-      image: "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=400&h=400&fit=crop&crop=center",
       price: 16.50,
       category: "crisps",
       brand: "Doritos",
@@ -110,7 +110,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 12,
       name: "Haribo Gummy Bears",
-      image: "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=400&h=400&fit=crop&crop=center",
       price: 12.75,
       category: "sweets",
       brand: "Haribo",

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
@@ -30,6 +31,16 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Contact Us - Smash 'A' Spud Ltd | Wholesale Food & Beverages</title>
+        <meta name="description" content="Contact Smash 'A' Spud Ltd for wholesale food and beverage inquiries. Get competitive pricing and exceptional service for your business needs." />
+        <meta name="keywords" content="contact, wholesale contact, food supplier contact, beverage supplier contact, business inquiry" />
+        <link rel="canonical" href="https://smashaspud.com/contact" />
+        <meta property="og:title" content="Contact Us - Smash 'A' Spud Ltd | Wholesale Food & Beverages" />
+        <meta property="og:description" content="Contact Smash 'A' Spud Ltd for wholesale food and beverage inquiries." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://smashaspud.com/contact" />
+      </Helmet>
       {/* Hero Section */}
       <motion.section
         className="bg-gradient-to-r from-primary-600 to-accent-500 text-white py-16"

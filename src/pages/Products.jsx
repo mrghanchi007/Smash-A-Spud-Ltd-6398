@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import ProductGrid from '../components/products/ProductGrid';
 import FilterSidebar from '../components/products/FilterSidebar';
 import SafeIcon from '../common/SafeIcon';
@@ -17,6 +18,16 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Products - Smash 'A' Spud Ltd | Wholesale Food & Beverages</title>
+        <meta name="description" content="Browse our comprehensive range of wholesale food and beverage products. Quality snacks, drinks, sweets, and more at competitive wholesale prices." />
+        <meta name="keywords" content="wholesale products, food products, beverage products, snacks wholesale, drinks wholesale, sweets wholesale" />
+        <link rel="canonical" href="https://smashaspud.com/products" />
+        <meta property="og:title" content="Products - Smash 'A' Spud Ltd | Wholesale Food & Beverages" />
+        <meta property="og:description" content="Browse our comprehensive range of wholesale food and beverage products." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://smashaspud.com/products" />
+      </Helmet>
       {/* Hero Section */}
       <motion.section
         className="bg-gradient-to-r from-primary-600 to-accent-500 text-white py-16"

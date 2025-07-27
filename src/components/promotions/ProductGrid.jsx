@@ -6,12 +6,12 @@ const ProductGrid = ({ filters }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 12;
 
-  // Sample product data
+  // Sample product data with proper images
   const allProducts = [
     {
       id: 1,
       name: "Capri Sun Cherry",
-      image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&h=400&fit=crop&crop=center",
       rrp: 1.19,
       cost: 0.79,
       pack: "15x330ml",
@@ -24,7 +24,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 2,
       name: "Walker's Classic Crisps",
-      image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=400&h=400&fit=crop&crop=center",
       rrp: 0.89,
       cost: 0.55,
       pack: "24x25g",
@@ -37,7 +37,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 3,
       name: "Coca Cola Classic",
-      image: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400&h=400&fit=crop&crop=center",
       rrp: 1.25,
       cost: 0.85,
       pack: "12x330ml",
@@ -50,7 +50,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 4,
       name: "Cadbury Dairy Milk",
-      image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=400&fit=crop&crop=center",
       rrp: 2.50,
       cost: 1.75,
       pack: "20x45g",
@@ -63,7 +63,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 5,
       name: "Heinz Baked Beans",
-      image: "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=300&h=300&fit=crop",
+      image: "https://jollyposhfoods.com/cdn/shop/files/Beans.png",
       rrp: 1.10,
       cost: 0.70,
       pack: "12x415g",
@@ -76,7 +76,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 6,
       name: "Mr. Kipling Cakes",
-      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop&crop=center",
       rrp: 2.00,
       cost: 1.30,
       pack: "6x6 pack",
@@ -89,7 +89,7 @@ const ProductGrid = ({ filters }) => {
     {
       id: 7,
       name: "Red Bull Energy",
-      image: "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?w=300&h=300&fit=crop",
+      image: "https://cxp.asia/2020/wp-content/uploads/2021/05/RB_Classic_FinalWEB_JPEG_80.jpg",
       rrp: 1.85,
       cost: 1.25,
       pack: "24x250ml",

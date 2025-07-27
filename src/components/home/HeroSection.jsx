@@ -34,10 +34,72 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
+        {/* Hero Logo with Funny Animation */}
+        <motion.div
+          className="mb-8 flex justify-center"
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          <motion.div className="relative">
+            <motion.img
+              src="/img/Logo.png"
+              alt="Smash 'A' Spud Ltd Logo"
+              className="h-36 w-auto"
+              initial={{ 
+                scale: 0, 
+                rotate: -180,
+                filter: "brightness(0)"
+              }}
+              animate={{ 
+                scale: [0, 1.3, 0.9, 1.1, 1],
+                rotate: [-180, 0, 15, -10, 0],
+                filter: ["brightness(0)", "brightness(1.5)", "brightness(1)"]
+              }}
+              transition={{ 
+                duration: 1.5,
+                delay: 0.5,
+                ease: "easeOut"
+              }}
+              whileHover={{
+                rotate: [0, 10, -10, 0],
+                scale: 1.2,
+                filter: "brightness(1.3)"
+              }}
+            />
+            
+            {/* Sparkle Effects around Logo */}
+            {[...Array(6)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-3 h-3 bg-yellow-300 rounded-full"
+                style={{
+                  left: `${Math.random() * 120 - 10}%`,
+                  top: `${Math.random() * 120 - 10}%`,
+                }}
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ 
+                  scale: [0, 1, 0],
+                  opacity: [0, 1, 0],
+                  x: [0, Math.random() * 30 - 15],
+                  y: [0, Math.random() * 30 - 15]
+                }}
+                transition={{ 
+                  duration: 2,
+                  delay: 1 + i * 0.2,
+                  repeat: Infinity,
+                  repeatDelay: 4
+                }}
+              />
+            ))}
+          </motion.div>
+        </motion.div>
+
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="relative z-20"
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
             Premium Wholesale
@@ -46,7 +108,7 @@ const HeroSection = () => {
           </h1>
           
           <motion.p
-            className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto relative z-20"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -79,9 +141,9 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
 
-        {/* Floating Product Images */}
+        {/* Floating Product Images - Positioned outside text area */}
         <motion.div
-          className="absolute right-10 top-1/4 hidden lg:block"
+          className="absolute right-4 top-1/3 hidden lg:block pointer-events-none"
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity }}
         >
@@ -91,7 +153,7 @@ const HeroSection = () => {
         </motion.div>
 
         <motion.div
-          className="absolute left-10 bottom-1/4 hidden lg:block"
+          className="absolute left-4 bottom-1/3 hidden lg:block pointer-events-none"
           animate={{ y: [0, 15, 0] }}
           transition={{ duration: 3, repeat: Infinity, delay: 1 }}
         >
@@ -101,7 +163,7 @@ const HeroSection = () => {
         </motion.div>
 
         <motion.div
-          className="absolute right-1/4 bottom-20 hidden lg:block"
+          className="absolute right-1/3 bottom-16 hidden lg:block pointer-events-none"
           animate={{ y: [0, -25, 0] }}
           transition={{ duration: 5, repeat: Infinity, delay: 2 }}
         >
